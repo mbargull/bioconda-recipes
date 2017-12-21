@@ -31,3 +31,16 @@ ln -s "$QUAST_HOME/quast.py" "$BINARY_HOME/quast"
 
 chmod +x $QUAST_HOME/metaquast.py
 ln -s "$QUAST_HOME/metaquast.py" "$BINARY_HOME/metaquast"
+
+cat > "$BINARY_HOME/evil-exit-monkeypatch.py" <<<EOF
+#!/usr/bin/env python
+import sys
+import traceback
+_exit = sys.exit
+def exit(status=None):
+    traceback.print_stack()
+    sys.stderr.write("{}\n".format(status))
+    _exit(status)
+sys.exit = _exit
+exec(sys.stdin.read())
+EOF

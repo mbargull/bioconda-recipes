@@ -46,9 +46,9 @@ test:
     - test_data
   commands:
     - quast --version
-    - quast --test --force-nucmer --no-plots
+    - evil-exit-monkeypatch.py <$(which quast) --test --force-nucmer
     - metaquast --version
-    - metaquast --test --force-nucmer --no-plots
+    - evil-exit-monkeypatch.py <$(which metaquast) --test --force-nucmer
 
 about:
   home: https://sourceforge.net/projects/{{ name|lower }}/
