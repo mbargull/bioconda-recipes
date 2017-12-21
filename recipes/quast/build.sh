@@ -34,6 +34,7 @@ ln -s "$QUAST_HOME/metaquast.py" "$BINARY_HOME/metaquast"
 
 cat > "$BINARY_HOME/evil-exit-monkeypatch.py" <<<EOF
 #!/usr/bin/env python
+
 import sys
 import traceback
 _exit = sys.exit
