@@ -32,7 +32,7 @@ ln -s "$QUAST_HOME/quast.py" "$BINARY_HOME/quast"
 chmod +x $QUAST_HOME/metaquast.py
 ln -s "$QUAST_HOME/metaquast.py" "$BINARY_HOME/metaquast"
 
-cat > "$BINARY_HOME/evil-exit-monkeypatch.py" <<<EOF
+cat > "$BINARY_HOME/evil-exit-monkeypatch.py" <<EOF
 #!/usr/bin/env python
 
 import sys
