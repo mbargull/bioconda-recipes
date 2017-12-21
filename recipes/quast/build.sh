@@ -42,6 +42,6 @@ def exit(status=None):
     traceback.print_stack()
     sys.stderr.write("{}\n".format(status))
     _exit(status)
-sys.exit = _exit
+sys.exit = exit
 exec(sys.stdin.read())
 EOF
