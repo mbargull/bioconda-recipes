@@ -1,5 +1,7 @@
 #!/bin/bash
 
+case "${target_platform}" in osx-*) export MACOSX_DEPLOYMENT_TARGET=10.12 ; esac
+
 mkdir -p $PREFIX/bin
 
 mkdir -p build
