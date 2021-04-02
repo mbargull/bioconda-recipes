@@ -1,0 +1,23 @@
+From 78d0bd44e6817465ee85cb7b5c23a9f70a32ab58 Mon Sep 17 00:00:00 2001
+From: Rob Patro <rob-p@users.noreply.github.com>
+Date: Fri, 12 Feb 2021 16:53:10 -0500
+Subject: [PATCH] Update Cargo.toml
+
+Pin rand to 0.7.3 on this branch until develop is merged in.
+---
+ Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index 3f166b9..ad0eab4 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -11,7 +11,7 @@ libradicl = { path = "libradicl" }
+ slog = "2.5.2"
+ slog-term = "2.6.0"
+ slog-async = "2.5.0"
+-rand = "*"
++rand = "0.7.3"
+ chrono = "0.4.13"
+ mimalloc = { version = "0.1.19", default-features = false }
+ num_cpus = "1.13.0"
